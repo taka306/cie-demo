@@ -25,27 +25,16 @@
   p{margin:0 0 12px;font-size:15px}
   footer{font-size:11px;color:var(--muted);text-align:center;padding:16px;border-top:1px solid var(--line);margin-top:24px}
 
-  /* ---- 広告枠（すべて架空の広告） ---- */
-  .ad-label{font-size:10px;color:#9ca3af;letter-spacing:.1em;margin:14px 0 2px}
-  .bn{display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;border-radius:6px;font-weight:800;color:#fff;margin:0 0 14px;padding:12px;overflow:hidden;position:relative}
-  .bn small{font-weight:500;font-size:12px;opacity:.9}
-  .bn .cta{margin-top:6px;background:#fff;color:#111;border-radius:999px;padding:4px 14px;font-size:13px}
-  #top-ad{height:90px;background:linear-gradient(90deg,#ff3d6e,#ff9a3d);font-size:20px;margin:0}
-  .ad-unit{height:250px;background:linear-gradient(135deg,#7b2ff7,#f107a3);font-size:24px}
-  .inline-ad{height:180px;background:repeating-linear-gradient(45deg,#ffd400 0 18px,#ffbf00 18px 36px);color:#1a1a1a;font-size:22px}
-  .ad-slot{height:120px;background:linear-gradient(90deg,#00b37e,#00d4ff);font-size:19px}
-  .ad-wrapper{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
-  .ad-wrapper .bn{height:130px;margin:0;font-size:15px}
-  .ad-wrapper .bn:nth-child(1){background:#e11d48}.ad-wrapper .bn:nth-child(2){background:#2563eb}
-  .ad-wrapper .bn:nth-child(3){background:#16a34a}.ad-wrapper .bn:nth-child(4){background:#ea580c}
-  .ad-footer{height:110px;background:#111827;font-size:18px}
-  .sticky-ad{position:fixed;left:0;right:0;bottom:0;height:64px;background:linear-gradient(90deg,#ff006a,#ff7a00);color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;font-weight:800;font-size:16px;z-index:10;box-shadow:0 -2px 10px #0004}
-  .sticky-ad .x{position:absolute;right:8px;top:4px;font-size:12px;opacity:.8}
+  /* ---- 広告（画像はすべて架空。/adbanners/ 以下に置いている） ---- */
+  .adimg{display:block;width:100%;height:auto}
+  .adimg.top{width:100%}
+  .adimg.in{margin:14px 0}
+  .adimg.sticky{position:fixed;left:0;right:0;bottom:0;z-index:10;box-shadow:0 -2px 10px #0004}
 </style>
 </head>
 <body>
 
-<div id="top-ad" class="bn">今だけ最大90%OFF！<small>架空ショップ「ほしぞらマート」</small></div>
+<img class="adimg top" src="adbanners/top.png" alt="" onerror="this.remove()">
 
 <header class="site">
   <div class="logo">そらまめ通信<small>SORAMAME NEWS</small></div>
@@ -57,8 +46,7 @@
   <h1>秋の夜長に。ベランダで始める、はじめての星空観察</h1>
   <div class="meta">2026年10月29日　文・そらまめ編集部</div>
 
-  <div class="ad-label">広告</div>
-  <div class="ad-unit bn">あなたの運勢、<br>無料で診断します<span class="cta">今すぐ診断する</span></div>
+  <img class="adimg in" src="adbanners/fortune.png" alt="" onerror="this.remove()">
 
   <div class="hero" role="img" aria-label="夜空のイメージ"></div>
   <div class="caption">空気が澄む秋は、星を見るのにちょうどいい季節です（イメージ）</div>
@@ -68,31 +56,22 @@
   <h2>まずは部屋の明かりを消す</h2>
   <p>目が暗さに慣れるまでには、10分から15分ほどかかります。スマホの画面を見ると目がまた明るさに戻ってしまうので、観察中はなるべく見ないのがコツです。</p>
 
-  <div class="ad-label">広告</div>
-  <div class="inline-ad bn">このゲーム、寝る前に<br>始めると止まらない…<span class="cta">無料ダウンロード</span></div>
+  <img class="adimg in" src="adbanners/game.png" alt="" onerror="this.remove()">
 
   <p>どうしても使うときは、画面を一番暗くして、赤いセロハンをかぶせておくと目にやさしくなります。</p>
 
   <h2>明るい星から探してみる</h2>
   <p>秋の夜空で見つけやすいのは、四つの星が大きな四角形をつくる「秋の四辺形」です。南の空の高いところを見上げると、少し間隔の開いた四角が見つかります。</p>
 
-  <div class="ad-label">広告</div>
-  <div class="ad-slot bn">肩こり・目の疲れに<small>架空ブランド「まどろみ枕」新登場</small></div>
+  <img class="adimg in" src="adbanners/pillow.png" alt="" onerror="this.remove()">
 
-  <div class="ad-label">おすすめ（PR）</div>
-  <div class="ad-wrapper">
-    <div class="bn">驚きの<br>ビフォーアフター</div>
-    <div class="bn">1日5分で<br>英語がペラペラ？</div>
-    <div class="bn">まだ間に合う<br>お得なキャンペーン</div>
-    <div class="bn">話題の<br>あのアイテム</div>
-  </div>
+  <img class="adimg in" src="adbanners/pr.png" alt="" onerror="this.remove()">
 
   <h2>星座アプリは「答え合わせ」に</h2>
   <p>見つけた星が何なのか知りたくなったら、星座アプリで確かめてみましょう。先に自分の目で探してからアプリを見ると、星の並びがずっと覚えやすくなります。</p>
   <p>寒くなってきたら、温かい飲み物とひざ掛けを用意して。ゆっくり空を眺める時間は、それだけで小さな休憩になります。</p>
 
-  <div class="ad-label">広告</div>
-  <div class="ad-footer bn">期間限定セール開催中<small>架空ストア「つきみ堂」</small></div>
+  <img class="adimg in" src="adbanners/sale.png" alt="" onerror="this.remove()">
 
   <footer>
     このページは、ブラウザ「CIE」の広告ブロックを紹介するために作ったデモページです。<br>
@@ -101,7 +80,7 @@
   </footer>
 </main>
 
-<div class="sticky-ad">今すぐ登録で500ポイント！<span class="cta" style="background:#fff;color:#111;border-radius:999px;padding:3px 12px;font-size:12px">登録</span><span class="x">×</span></div>
+<img class="adimg sticky" src="adbanners/points.png" alt="" onerror="this.remove()">
 
 </body>
 </html>
